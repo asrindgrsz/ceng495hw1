@@ -1,0 +1,7 @@
+Flask==1.1.4
+pymongo[srv]==3.12.1
+Flask-Pymongo==2.3.0
+Flask-Cors==3.0.10
+Gunicorn==20.1.0
+markupsafe==2.0.1
+sendgrid==6.11.0
