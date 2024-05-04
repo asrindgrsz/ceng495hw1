@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify, s
 import pymongo
 import sys
 import logging
-from .db import get_db
+from db import get_db
 from datetime import datetime
 from  bson.objectid import ObjectId
 
