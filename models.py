@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash
-from .db import get_db
+from db import get_db
 from app import mongo
 
 def create_user(email, password, name, phone):
