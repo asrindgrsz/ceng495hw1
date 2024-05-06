@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+<head>
+    <title>Create Item</title>
+    <script>
+    // Function to update visible category-specific fields
+    function updateCategoryFields() {
+        var category = document.getElementById("category").value;
+
+        // Hide all category-specific sections
+        document.getElementById("vehicle-attributes").style.display = "none";
+        document.getElementById("computer-attributes").style.display = "none";
+        document.getElementById("phone-attributes").style.display = "none";
+        document.getElementById("private-lesson-attributes").style.display = "none";
+
+        // Show the relevant section based on the selected category
+        if (category === "vehicles") {
+            document.getElementById("vehicle-attributes").style.display = "block";
+        } else if (category === "computers") {
+            document.getElementById("computer-attributes").style.display = "block";
+        } else if (category === "phones") {
+            document.getElementById("phone-attributes").style.display = "block";
+        } else if (category === "private_lessons") {
+            document.getElementById("private-lesson-attributes").style.display = "block";
+        }
+    }
+
+    // Function to add custom attribute
+    function addCustomAttribute() {
+        var customAttributesDiv = document.getElementById("custom-attributes");
+
+        var newAttribute = document.createElement("div");
+        newAttribute.innerHTML = `
+            <label for="custom-attribute-key">Attribute:</label>
+            <input type="text" name="custom_attribute_key[]" required>
+            <label for="custom-attribute-value">Value:</label>
+            <input type="text" name="custom_attribute_value[]" required>
+        `;
+        
+        customAttributesDiv.appendChild(newAttribute);
+    }
+    </script>
+</head>
+{% block content %}
+<body onload="updateCategoryFields()">
+    <h1>Create Item</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+
+        <!-- Main Attributes -->
+        <div>
+            <label>{{ form.title.label }}</label>
+            {{ form.title() }}
+        </div>
+
+        <div>
+            <label>{{ form.description.label }}</label>
+            {{ form.description() }}
+        </div>
+
+        <div>
+            <label>{{ form.image.label }}</label>
+            {{ form.image() }}
+        </div>
+
+        <div>
+            <label>{{ form.price.label }}</label>
+            {{ form.price() }}
+        </div>
+
+        <!-- Category Selection -->
+        <div>
+            <label for="category">Select Category:</label>
+            {{ form.category(id="category", onchange="updateCategoryFields()") }}
+        </div>
+
+        <!-- Category-Specific Attributes -->
+        <div id="vehicle-attributes" style="display:none;">
+            <h3>Vehicle Attributes</h3>
+            <div>
+                <label>Type:</label>
+                <input type="text" name="type">
+            </div>
+            <div>
+                <label>Brand:</label>
+                <input type="text" name="brand">
+            </div>
+            <div>
+                <label>Model:</label>
+                <input type="text" name="model">
+            </div>
+            <div>
+                <label>Year:</label>
+                <input type="number" name="year">
+            </div>
+            <div>
+                <label>Color:</label>
+                <input type="text" name="color">
+            </div>
+            <div>
+                <label>Engine Displacement:</label>
+                <input type="number" name="engine_displacement">
+            </div>
+            <div>
+                <label>Fuel Type:</label>
+                <input type="text" name="fuel_type">
+            </div>
+            <div>
+                <label>Transmission Type:</label>
+                <input type="text" name="transmission_type">
+            </div>
+            <div>
+                <label>Mileage:</label>
+                <input type="number" name="mileage">
+            </div>
+        </div>
+
+        <div id="computer-attributes" style="display:none;">
+            <h3>Computer Attributes</h3>
+            <div>
+                <label>Processor:</label>
+                <input type="text" name="processor">
+            </div>
+            <div>
+                <label>RAM:</label>
+                <input type="number" name="ram">
+            </div>
+            <div>
+                <label>Storage:</label>
+                <input type="number" name="storage">
+            </div>
+            <div>
+                <label>Graphics Card:</label>
+                <input type="text" name="graphics_card">
+            </div>
+            <div>
+                <label>Operating System:</label>
+                <input type="text" name="operating_system">
+            </div>
+        </div>
+
+        <div id="phone-attributes" style="display:none;">
+            <h3>Phone Attributes</h3>
+            <div>
+                <label>Brand:</label>
+                <input type="text" name="brand">
+            </div>
+            <div>
+                <label>Model:</label>
+                <input type="text" name="model">
+            </div>
+            <div>
+                <label>Year:</label>
+                <input type="number" name="year">
+            </div>
+            <div>
+                <label>Operating System:</label>
+                <input type="text" name="operating_system">
+            </div>
+            <div>
+                <label>Processor:</label>
+                <input type="text" name="processor">
+            </div>
+            <div>
+                <label>RAM:</label>
+                <input type="number" name="ram">
+            </div>
+            <div>
+                <label>Storage:</label>
+                <input type="number" name="storage">
+            </div>
+            <div>
+                <label>Camera Specifications:</label>
+                <input type="text" name="camera_specs">
+            </div>
+            <div>
+                <label>Battery Capacity:</label>
+                <input type="number" name="battery_capacity">
+            </div>
+        </div>
+
+        <div id="private-lesson-attributes" style="display:none;">
+            <h3>Private Lesson Attributes</h3>
+            <div>
+                <label>Tutor Name:</label>
+                <input type="text" name="tutor_name">
+            </div>
+            <div>
+                <label>Lessons:</label>
+                <input type="text" name="lessons">
+            </div>
+            <div>
+                <label>Location:</label>
+                <input type="text" name="location">
+            </div>
+            <div>
+                <label>Duration:</label>
+                <input type="number" name="duration">
+            </div>
+        </div>
+
+        <!-- Custom Attributes -->
+        <div id="custom-attributes">
+            <h3>Custom Attributes</h3>
+            <div>
+                <button type="button" onclick="addCustomAttribute()">Add Custom Attribute</button>
+            </div>
+        </div>
+
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+</body>
+{% endblock %}
+</html>
