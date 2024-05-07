@@ -33,3 +33,22 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators=[InputRequired(), Length(min=8)])
     submit = SubmitField("Login")
     
+
+class UpdateListingForm(FlaskForm):
+    title = StringField("Title", validators=[InputRequired(), Length(min=1, max=100)])
+    description = TextAreaField("Description", validators=[InputRequired(), Length(min=10)])
+    image = StringField("Image URL", validators=[Optional(), Length(min=1)])
+    price = FloatField("Price", validators=[InputRequired()])
+
+    # Static category (cannot be changed)
+    category = StringField("Category", render_kw={"readonly": True})
+        
+    def __init__(self, listing=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        if listing:
+            self.title.data = listing.get("title", "")
+            self.description.data = listing.get("description", "")
+            self.image.data = listing.get("image", "")
+            self.price.data = listing.get("price", 0.0)
+            self.category.data = listing.get("category", "")

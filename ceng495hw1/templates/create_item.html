@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    {% block content %}
 <head>
     <title>Create Item</title>
     <script>
@@ -40,7 +43,6 @@
     }
     </script>
 </head>
-{% block content %}
 <body onload="updateCategoryFields()">
     <h1>Create Item</h1>
     <form method="post">
@@ -118,15 +120,15 @@
             <h3>Computer Attributes</h3>
             <div>
                 <label>Processor:</label>
-                <input type="text" name="processor">
+                <input type="text" name="processor_pc">
             </div>
             <div>
-                <label>RAM:</label>
-                <input type="number" name="ram">
+                <label>RAM of Computer:</label>
+                <input type="number" name="ram_pc">
             </div>
             <div>
                 <label>Storage:</label>
-                <input type="number" name="storage">
+                <input type="number" name="storage_pc">
             </div>
             <div>
                 <label>Graphics Card:</label>
@@ -134,7 +136,7 @@
             </div>
             <div>
                 <label>Operating System:</label>
-                <input type="text" name="operating_system">
+                <input type="text" name="operating_system_pc">
             </div>
         </div>
 
@@ -142,31 +144,31 @@
             <h3>Phone Attributes</h3>
             <div>
                 <label>Brand:</label>
-                <input type="text" name="brand">
+                <input type="text" name="brand_phone">
             </div>
             <div>
                 <label>Model:</label>
-                <input type="text" name="model">
+                <input type="text" name="model_phone">
             </div>
             <div>
-                <label>Year:</label>
-                <input type="number" name="year">
+                <label>Production Date:</label>
+                <input type="number" name="production_date">
             </div>
             <div>
                 <label>Operating System:</label>
-                <input type="text" name="operating_system">
+                <input type="text" name="operating_system_phone">
             </div>
             <div>
                 <label>Processor:</label>
-                <input type="text" name="processor">
+                <input type="text" name="processor_phone">
             </div>
             <div>
-                <label>RAM:</label>
-                <input type="number" name="ram">
+                <label>RAM of Phone:</label>
+                <input type="number" name="ram_phone">
             </div>
             <div>
                 <label>Storage:</label>
-                <input type="number" name="storage">
+                <input type="number" name="storage_phone">
             </div>
             <div>
                 <label>Camera Specifications:</label>

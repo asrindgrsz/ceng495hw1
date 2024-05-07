@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listing Details</h2>
+
+<!-- Display the listing's image at the top -->
+<div>
+    <img src="{{ listing.get('image', '/static/no-image.jpg') }}" alt="Listing Image" style="max-width: 100%;">
+</div>
+
+<!-- Display all attributes below the image -->
+<div>
+    <p><strong>Title:</strong> {{ listing.get('title', 'N/A') }}</p>
+    <p><strong>Description:</strong> {{ listing.get('description', 'N/A') }}</p>
+    <p><strong>Category:</strong> {{ listing.get('category', 'N/A') }}</p>
+    <p><strong>Owner:</strong> {{ listing.get('owner', 'Unknown') }}</p>
+    <p><strong>Created At:</strong> {{ listing['created_at'].strftime('%Y-%m-%d %H:%M:%S') }}</p>
+    <p><strong>Price:</strong> ${{ listing.get('price', 'N/A') }}</p>
+
+    <!-- Display phone number only if user is logged in -->
+    {% if session.get('email') %}
+        <p><strong>Owner's Phone:</strong> {{ user.get('phone') }}</p>
+    {% else %}
+        <p><strong>Owner's Phone:</strong> <em>Login to view</em></p>  <!-- Prompt to log in -->
+    {% endif %}
+
+    <!-- Additional attributes -->
+    {% for key, value in listing.items() %}
+        {% if key not in ['_id', 'created_at', 'title', 'description', 'category', 'owner', 'price', 'image', 'csrf_token'] %}
+            <p><strong>{{ key.replace('_', ' ').capitalize() }}:</strong> {{ value }}</p>
+        {% endif %}
+    {% endfor %}
+
+    {% if session.get('email') == listing.get('owner') %}  <!-- Check if user is the owner -->
+        <!-- Show update and delete buttons for the owner -->
+        <a href="{{ url_for('item.update_listing', listing_id=listing['_id']) }}" class="btn btn-warning">Update</a>
+        <a href="{{ url_for('item.delete_listing', listing_id=listing['_id']) }}" class="btn btn-danger">Delete</a>
+    {% endif %}
+</div>
+
+{% endblock %}

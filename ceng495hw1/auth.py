@@ -4,7 +4,7 @@ from .models import create_user, get_user_by_email
 from werkzeug.security import check_password_hash
 
 
-bp = Blueprint("auth", __name__, url_prefix="/auth")
+bp = Blueprint("auth", __name__, url_prefix="/")
 
 @bp.route('/register', methods=["GET", "POST"])
 def register():

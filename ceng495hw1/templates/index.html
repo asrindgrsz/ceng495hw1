@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Last 100 Listings</h2>
+
+<!-- Category Links -->
+<div class="category-links">
+    <a href="{{ url_for('item.category_listings', category='vehicles') }}">Vehicles</a>
+    <a href="{{ url_for('item.category_listings', category='computers') }}">Computers</a>
+    <a href="{{ url_for('item.category_listings', category='phones') }}">Phones</a>
+    <a href="{{ url_for('item.category_listings', category='private_lessons') }}">Private Lessons</a>
+</div>
+
+<!-- Table of Last 100 Listings -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Owner</th>
+            <th>Date</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for listing in listings %}
+        <tr>
+            <td>
+                <a href="{{ url_for('item.view_listing', listing_id=listing['_id']) }}">{{ listing['title'] }}</a>  <!-- Link to view listing -->
+            </td>
+            <td>{{ listing['category'] }}</td>
+            <td>{{ listing.get('owner', 'Unknown') }}</td>
+            <td>{{ listing['created_at'].strftime('%Y-%m-%d %H:%M:%S') }}</td>  <!-- Format date -->
+            <td>${{ listing['price'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

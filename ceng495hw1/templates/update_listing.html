@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Update Listing</h2>
+
+<form method="post">
+    {{ form.hidden_tag() }}
+
+    <!-- Display the image at the top -->
+    <div>
+        <img src="{{ listing.get('image') or '/static/no-image.jpg' }}" alt="Listing Image" style="max-width: 100%;">
+    </div>
+
+    <!-- Pre-filled form fields for listing attributes -->
+    {% for key, value in listing.items() %}
+        {% if key not in ['hidden_tag', 'csrf_token', 'category', 'image','_id','owner','created_at'] %}
+            <div>
+                <label>{{ key.capitalize() }}</label>
+                <input type="text" name="{{ key }}" value="{{ value }}" class="form-control">
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Static category field (non-editable) -->
+    <div>
+        <label> Category: </label>
+        {{ listing.get('category').capitalize() }}  <!-- This field is static and cannot be changed -->
+    </div>
+    <button type="submit">Update Listing</button>
+</form>
+
+{% endblock %}

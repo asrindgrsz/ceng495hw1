@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listings for Category: {{ category }}</h2>
+
+<!-- Table of Listings for this Category -->
+<table table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            {% for key in listings[0] %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for listing in listings %}
+        <tr>
+            <td>
+                <a href="{{ url_for('item.view_listing', listing_id=listing['_id']) }}">{{ listing['title'] }}</a>
+            </td>
+            {% for key in listing %}
+                <td>{{ listing.get(key)}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

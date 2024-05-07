@@ -17,6 +17,7 @@
         <div class="navbar-nav ml-auto">
             {% if session.get('email') %}
                 <!-- User is logged in -->
+                <span class="navbar-text mr-3">{{ session.get('name') }}</span>
                 <a class="nav-item nav-link" href="{{ url_for('item.create_item') }}">Add Listing</a>
                 <a class="nav-item nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
             {% else %}
