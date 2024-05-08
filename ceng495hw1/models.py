@@ -14,6 +14,7 @@ def create_user(email, password, name, phone):
         "password": hashed_password,
         "name": name,
         "phone": phone,
+        "admin": False
     })
 
 def get_user_by_email(email):

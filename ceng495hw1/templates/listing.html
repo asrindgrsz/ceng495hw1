@@ -31,6 +31,11 @@
         {% endif %}
     {% endfor %}
 
+    {% if session.get('admin') == True %}  <!-- Check if user is the admin -->
+        <!-- Show delete buttons for the admin -->
+        <a href="{{ url_for('item.delete_listing', listing_id=listing['_id']) }}" class="btn btn-danger">Delete</a>
+    {% endif %}
+
     {% if session.get('email') == listing.get('owner') %}  <!-- Check if user is the owner -->
         <!-- Show update and delete buttons for the owner -->
         <a href="{{ url_for('item.update_listing', listing_id=listing['_id']) }}" class="btn btn-warning">Update</a>

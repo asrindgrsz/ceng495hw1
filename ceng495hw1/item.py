@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for, flash, Blueprint, session
-from .models import add_item
+from .models import add_item, get_user_by_email
 from .forms import CreateItemForm, UpdateListingForm
 from .decorators import login_required
 from .db import get_db
@@ -11,7 +11,6 @@ from wtforms.validators import InputRequired, Email, Length, Regexp, ValidationE
 bp = Blueprint("item", __name__, url_prefix="/")
 
 @bp.route('/item', methods=["GET", "POST"])
-#@login_required
 def create_item():
     form = CreateItemForm()
     if request.method == 'POST':
@@ -112,9 +111,10 @@ def delete_listing(listing_id):
         return redirect(url_for("item.index"))
 
     # Ensure the user is the owner
-    if session.get("email") != listing.get("owner"):
+    if session.get("email") != listing.get("owner") and session.get("admin") == False:
         flash("You are not authorized to delete this listing.", "danger")
         return redirect(url_for("item.index"))
+    
 
     # Delete the listing from the database
     db.items.delete_one({"_id": ObjectId(listing_id)})

@@ -39,6 +39,10 @@ def login():
                 session.clear()
                 session['email'] = user["email"]
                 session['name'] = user["name"]
+                if user["admin"] == True:
+                    session['admin'] = True
+                else:
+                    session['admin'] = False
                 flash("Logged in successfully.", "success")
                 return redirect(url_for("item.index"))  # Redirect to a secured page
             

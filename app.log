@@ -1,0 +1,170 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:24] "GET /listing/663970ae48a0d4dfdc9ad62e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:45] "[35m[1mGET /listing/6638e0f539c797ef0600ab75 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:45] "GET /listing/6638e0f539c797ef0600ab75?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:45] "GET /listing/6638e0f539c797ef0600ab75?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:46] "GET /listing/6638e0f539c797ef0600ab75?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:46] "[36mGET /listing/6638e0f539c797ef0600ab75?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:57] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:10:59] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:17] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:28] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:28] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:28] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:29] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:11:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:12:32] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:12:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:12:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:12:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:12:34] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:13:26] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:13:33] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:13:35] "GET /register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:13:51] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:13:51] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:14:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:14:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:14:32] "GET /listing/6639245f79177c293f42732e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:14:34] "[35m[1mGET /listing/kkkkkkkkkkkkkkkkkkkk HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:15:34] "GET /listing/6639245f79177c293f42732e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:15:34] "[35m[1mGET /listing/kkkkkkkkkkkkkkkkkkkk HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:16:10] "GET /listing/6639245f79177c293f42732e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:16:11] "[35m[1mGET /listing/kkkkkkkkkkkkkkkkkkkk HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:22] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:33] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:34] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:17:54] "GET /item HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:14] "[32mPOST /item HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:24] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:41] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:53] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:19:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:20:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:01] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:09] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:42] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:47] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:22:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:23:47] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:23:52] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:23:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:25:33] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:25:40] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:25:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug: * Detected change in 'C:\\Users\\test\\Desktop\\CENG495HW1\\ceng495hw1\\ceng495hw1\\item.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-007-342
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:16] "GET /listing/663ac5018355feb5bdd25c6e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:24] "[32mGET /delete_listing/663ac5018355feb5bdd25c6e HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:34] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:59] "GET /listing/6639245f79177c293f42732e HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:28:59] "[35m[1mGET /listing/kkkkkkkkkkkkkkkkkkkk HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:06] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:29:32] "GET /item HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:07] "[32mPOST /item HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:17] "GET /listing/663ac78f6a18677ad517b5da HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:35] "[32mGET /delete_listing/663ac78f6a18677ad517b5da HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2024 03:30:58] "GET /login HTTP/1.1" 200 -
